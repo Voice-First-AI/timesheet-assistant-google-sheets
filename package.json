@@ -4,6 +4,7 @@
   "description": "A sample voice app that works with the Jovo Framework",
   "main": "src/index.js",
   "dependencies": {
+    "google-spreadsheet": "^3.0.11",
     "jovo-db-filedb": "^3.0.0",
     "jovo-framework": "^3.0.18",
     "jovo-platform-alexa": "^3.0.0",
