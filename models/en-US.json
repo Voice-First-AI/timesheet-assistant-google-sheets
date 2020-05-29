@@ -2,20 +2,20 @@
 	"invocation": "sweets timesheet",
 	"intents": [
 		{
-			"name": "YesNoIntent",
-			"phrases": [
-				"{yesNo}"
-			],
-			"inputs": [
-				{
-					"name": "yesNo",
-					"type": "yesNoInputType"
-				}
-			]
-		},
-		{
 			"name": "CatchAllIntent",
 			"phrases": [
+				"today I'm working in {anything}",
+				"today I'm working on {anything}",
+				"today I'm working at {anything}",
+				"I'm working on {anything}",
+				"I'm working in {anything}",
+				"I'm working at {anything}",
+				"today I worked on {anything}",
+				"today I did {anything}",
+				"today I {anything}",
+				"I worked on {anything}",
+				"I did {anything}",
+				"I {anything}",
 				"{anything}"
 			],
 			"inputs": [
