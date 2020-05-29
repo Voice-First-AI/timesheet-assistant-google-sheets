@@ -42,9 +42,11 @@ app.setHandler({
         console.log(getDate());
         console.log(this.$session.$data.isClockIn);
         if (this.$session.$data.isClockIn) {
-            this.ask("Welcome to your timesheet assistant. Where are you working today?")
+            this.$speech.addAudio("https://firebasestorage.googleapis.com/v0/b/voice-first-tech.appspot.com/o/Projects%2FSweets-Timesheet-Voice-Assistant%2Fholding_welcome.clockin.mp3?alt=media","Welcome to your timesheet assistant. Where are you working today?");
+            this.ask(this.$speech);
         } else {
-            this.ask("Welcome to your timesheet assistant. Congrats on finishing your day. What did you work on today?")
+            this.$speech.addAudio("https://firebasestorage.googleapis.com/v0/b/voice-first-tech.appspot.com/o/Projects%2FSweets-Timesheet-Voice-Assistant%2Fholding_welcome.clockout.mp3?alt=media", "Welcome to your timesheet assistant. Congrats on finishing your day. What did you work on today?");
+            this.ask(this.$speech);
         }
     },
 
@@ -68,7 +70,8 @@ app.setHandler({
         const daysOfWeek = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
         const dayOfWeek = daysOfWeek[dayIndex];
         const clockInRow = await doc.sheetsByIndex[0].addRow({ Day: dayOfWeek, Date: getDate() , Arrival: hour+minute, Location: userInput}); 
-        return this.tell('You are now clocked in! Have fun working today!');
+        this.$speech.addAudio("https://firebasestorage.googleapis.com/v0/b/voice-first-tech.appspot.com/o/Projects%2FSweets-Timesheet-Voice-Assistant%2Fholding_clockin.confirm.mp3?alt=media", 'You are now clocked in! Have fun working today!');
+        this.tell(this.$speech);    
     },
 
     async ClockOutIntent() {
@@ -84,7 +87,8 @@ app.setHandler({
         rows[rowCount-1].Departure = hour+minute;
         rows[rowCount-1]["What I did"] = userInput;
         await rows[rowCount-1].save(); // save changes
-        return this.tell('You are now clocked out! Enjoy the rest of your day!');
+        this.$speech.addAudio("https://firebasestorage.googleapis.com/v0/b/voice-first-tech.appspot.com/o/Projects%2FSweets-Timesheet-Voice-Assistant%2Fholding_clockout.confirm.mp3?alt=media", 'You are now clocked out! Enjoy the rest of your day!');
+        this.tell(this.$speech); 
     }
 });
  
