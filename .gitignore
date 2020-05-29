@@ -1,0 +1,8 @@
+node_modules/
+db/
+bundle/
+bundle.zip
+.env
+package-lock.json
+platforms/
+test/

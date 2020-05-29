@@ -1,0 +1,120 @@
+{
+	"invocation": "sweets timesheet",
+	"intents": [
+		{
+			"name": "YesNoIntent",
+			"phrases": [
+				"{yesNo}"
+			],
+			"inputs": [
+				{
+					"name": "yesNo",
+					"type": "yesNoInputType"
+				}
+			]
+		},
+		{
+			"name": "CatchAllIntent",
+			"phrases": [
+				"{anything}"
+			],
+			"inputs": [
+				{
+					"name": "anything",
+					"type": {
+						"dialogflow": "@sys.any"
+					}
+				}
+			]
+		}
+	],
+	"inputTypes": [
+		{
+			"name": "yesNoInputType",
+			"values": [
+				{
+					"value": "yes",
+					"synonyms": [
+						"yeah",
+						"yessir",
+						"absolutely",
+						"please",
+						"that sounds right",
+						"correct",
+						"yes please",
+						"yea",
+						"yup",
+						"affirmative",
+						"you know it",
+						"affirm",
+						"approve",
+						"alright",
+						"all right",
+						"very well",
+						"of course",
+						"by all means",
+						"sure",
+						"certainly"
+					]
+				},
+				{
+					"value": "no",
+					"synonyms": [
+						"nope",
+						"no thank you",
+						"by no means",
+						"not at all",
+						"negative",
+						"never",
+						"that sourds wrong",
+						"incorrect",
+						"no thanks",
+						"nah",
+						"decline",
+						"deny"
+					]
+				}
+			]
+		}
+	],
+	"alexa": {
+		"interactionModel": {
+			"languageModel": {
+				"intents": [
+					{
+						"name": "AMAZON.CancelIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.HelpIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.StopIntent",
+						"samples": []
+					}
+				]
+			}
+		}
+	},
+	"dialogflow": {
+		"intents": [
+			{
+				"name": "Default Fallback Intent",
+				"auto": true,
+				"webhookUsed": true,
+				"fallbackIntent": true
+			},
+			{
+				"name": "Default Welcome Intent",
+				"auto": true,
+				"webhookUsed": true,
+				"events": [
+					{
+						"name": "WELCOME"
+					}
+				]
+			}
+		]
+	}
+}
