@@ -6,3 +6,4 @@ bundle.zip
 package-lock.json
 platforms/
 test/
+jovo-google-sheets-credentials.json
