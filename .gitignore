@@ -3,8 +3,4 @@ db/
 bundle/
 bundle.zip
 .env
-package-lock.json
-platforms/
-test/
-jovo-google-sheets-credentials.json
-project.js
+src/*.json
