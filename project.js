@@ -3,12 +3,8 @@
 // ------------------------------------------------------------------
 
 module.exports = {
-    alexaSkill: {
-       nlu: 'alexa',
-    },
-    googleAction: {
-       nlu: 'dialogflow',
-    },
-    endpoint: '${JOVO_WEBHOOK_URL}',
+  googleAction: {
+    projectId: '<TODO-YOUR-GOOGLE-PROJECT-ID>',
+  },
+  endpoint: '${JOVO_WEBHOOK_URL}',
 };
- 
