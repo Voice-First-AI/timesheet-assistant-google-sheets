@@ -4,8 +4,8 @@ This template contains a Voice First + Jovo Sample Voice App with Google Sheets 
 
 ## Timesheet Quest
 * [Setup Terminal (Windows-only)](#setup-terminal).
-* Setup Jovo.
-* Download Code.
+* [Setup Jovo](#setup-jovo).
+* [Download Code](#download-code).
 * Create Google Sheet.
 * Download Google Sheet API Credentials.
 * Setup gactions cli.
@@ -36,6 +36,7 @@ Jovo CLI Version: 3.0.28
 ```
 If you get an error, please ping Sweets in Voice First Slack channel.
 
+## Download Code
 After successfully installing the Jovo CLI, you can install the template using one of the following commands:
 
 ```sh
