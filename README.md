@@ -6,8 +6,8 @@ This template contains a Voice First + Jovo Sample Voice App with Google Sheets 
 * [Setup Terminal (Windows-only)](#setup-terminal).
 * [Setup Jovo](#setup-jovo).
 * [Download Code](#download-code).
-* Create Google Sheet.
-* Download Google Sheet API Credentials.
+* [Create Google Sheet](#create-google-sheet).
+* [Download Google Sheet API Credentials](#download-google-sheet-api-credentials).
 * Setup gactions cli.
 * Create Google Assistant.
 * Deploy to Google using Jovo cli.
@@ -28,7 +28,7 @@ $ npm install -g jovo-cli
 
 After installing the Jovo CLI check for successful install.
 ```sh
-jovo -v
+$ jovo -v
 ```
 which should return a version #
 ```sh
@@ -40,14 +40,14 @@ If you get an error, please ping Sweets in Voice First Slack channel.
 After successfully installing the Jovo CLI, you can install the template using one of the following commands:
 
 ```sh
-git clone https://github.com/Voice-First-AI/timesheet-assistant-google-sheets.git
+$ git clone https://github.com/Voice-First-AI/timesheet-assistant-google-sheets.git
 ```
 
 Change your working directory into your newly created project directory and run your voice app:
 ```sh
-cd timesheet-assistant-google-sheets
+$ cd timesheet-assistant-google-sheets
 
-npm i
+$ npm i
 
 # Run voice app, optionally with a --watch flag to restart on code changes.
 $ jovo run [-w]
@@ -55,8 +55,17 @@ $ jovo run [-w]
 
 > Read more about `jovo run` [here](https://www.jovo.tech/marketplace/jovo-cli#jovo-run).
 
-If you now go to the [Jovo Debugger](https://www.jovo.tech/marketplace/jovo-plugin-debugger) by pressing `.` or clicking on the webhook url in the terminal, you can test your voice application right away.
+## Create Google Sheet
+1. Open Template Google Sheet [here](https://docs.google.com/spreadsheets/d/1wsQJyAI_fxF5_3gMYT_a4Rv0g9SwNa8wte9V0Rq_3II/edit?usp=sharing).
+2. File -> Make a Copy -> OK.
+(Now in your newly copied spreadsheet)
+3. Share -> Change (Get link section) -> Anyone with the link -> Editor (this allows your code to both read & write to the timesheet).
+4. Copy the spreadsheet id (found in url https://docs.google.com/spreadsheets/d/<your-spreadsheet-id/edit#gid=0)
+5. Paste your spreadsheet id on `line 25` of `src/app.js`
+6. Save changes to your code.
 
+## Download Google Sheet API Credentials
+1. Follow Google's Documentation [here](https://developers.google.com/sheets/api/guides/authorizing#APIKey).
 There are a few `TODO` comments scattered in the following files:
 * `project.js`
 * `app.js`
