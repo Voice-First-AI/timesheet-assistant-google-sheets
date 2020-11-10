@@ -2,13 +2,39 @@
 
 This template contains a Voice First + Jovo Sample Voice App with Google Sheets API Integration, asking for the user's project they are working on & tasks completed and returning an SSML message. This is the default template for all new Voice First Coders & Software Engineers.
 
-## Quick Start
+## Timesheet Quest
+* Setup Terminal (Windows-only).
+* Setup Jovo.
+* Download Code.
+* Create Google Sheet.
+* Download Google Sheet API Credentials.
+* Setup gactions cli.
+* Create Google Assistant.
+* Deploy to Google using Jovo cli.
+* Test on Device.
+* Publish Submission Video to Youtube & TikTok & Twitter.
+
+## Setup Terminal (Windows-only).
+1. Download git bash [here](https://git-scm.com/downloads). 
+2. Open git bash anytime you need to use your terminal.
+
+## Setup Jovo
 
 To use the Voice First + Jovo Templates, you'll need the Jovo CLI. You can install it globally with NPM.
 
 ```sh
 $ npm install -g jovo-cli
 ```
+
+After installing the Jovo CLI check for successful install.
+```sh
+jovo -v
+```
+which should return a version #
+```sh
+Jovo CLI Version: 3.0.28
+```
+If you get an error, please ping Sweets in Voice First Slack channel.
 
 After successfully installing the Jovo CLI, you can install the template using one of the following commands:
 
