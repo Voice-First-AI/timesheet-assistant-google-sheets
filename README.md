@@ -3,7 +3,7 @@
 This template contains a Voice First + Jovo Sample Voice App with Google Sheets API Integration, asking for the user's project they are working on & tasks completed and returning an SSML message. This is the default template for all new Voice First Coders & Software Engineers.
 
 ## Timesheet Quest
-* [Setup Terminal (Windows-only)](#setup-terminal-(windows-only)).
+* [Setup Terminal (Windows-only)](#setup-terminal).
 * Setup Jovo.
 * Download Code.
 * Create Google Sheet.
@@ -14,7 +14,7 @@ This template contains a Voice First + Jovo Sample Voice App with Google Sheets 
 * Test on Device.
 * Publish Submission Video to Youtube & TikTok & Twitter.
 
-## Setup Terminal (Windows-only).
+## Setup Terminal
 1. Download git bash [here](https://git-scm.com/downloads). 
 2. Open git bash anytime you need to use your terminal.
 
